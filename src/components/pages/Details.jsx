@@ -51,6 +51,7 @@ function Details() {
             className="w-full h-13 rounded-none rounded-b-3xl bg-orange-500 py-4 text-white font-semibold hover:bg-orange-600 transition"
           >
                {
+                favoritesList && favoritesList.length > 0 &&
                 favoritesList.findIndex(item=>item.id ===recipeDetailsData?.id) !== -1 ? 'Remove from favorites':'Add to favorites'
                } 
           </Button>

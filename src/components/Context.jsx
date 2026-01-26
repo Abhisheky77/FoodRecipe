@@ -38,7 +38,7 @@ export default function GlobalState({ children }) {
     }
   }
 
-  /* ❤️ FAVORITES HANDLER */
+  /*  FAVORITES HANDLER */
   function handleAddToFavorites(getCurrentItem) {
     let cpyFavoritesList = [...favoritesList];
 
