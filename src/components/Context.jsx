@@ -11,8 +11,7 @@ export default function GlobalState({ children }) {
   const [favoritesList, setFavoritesList] = useState([]);
 
   const navigate = useNavigate();
-
-  /* 🔍 SEARCH HANDLER */
+ 
   async function handleSubmit(event) {
     event.preventDefault();
     setLoading(true);
@@ -57,17 +56,8 @@ export default function GlobalState({ children }) {
 
   return (
     <GlobalContext.Provider
-      value={{
-        search,
-        setSearch,
-        loading,
-        recipeList,
-        recipeDetailsData,
-        setRecipeDetailsData,
-        favoritesList,
-        handleSubmit,
-        handleAddToFavorites,
-      }}
+      value={{ search, setSearch, loading, recipeList, recipeDetailsData, 
+        setRecipeDetailsData, favoritesList,handleSubmit, handleAddToFavorites, }}
     >
       {children}
     </GlobalContext.Provider>
