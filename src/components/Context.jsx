@@ -36,8 +36,7 @@ export default function GlobalState({ children }) {
       setSearch("");
     }
   }
-
-  /*  FAVORITES HANDLER */
+ 
   function handleAddToFavorites(getCurrentItem) {
     let cpyFavoritesList = [...favoritesList];
 
