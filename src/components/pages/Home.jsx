@@ -1,15 +1,26 @@
 import { useContext } from "react"
 import { GlobalContext } from "../Context"
 import RecipeCard from "../recipeCard";
-
+import {ThreeDots } from "react-loader-spinner";
 
 function Home() {
     const { recipeList, loading } = useContext(GlobalContext)
     console.log("recipeList", recipeList);
 
     if (loading) {
-        return <div>Loading....</div>
-    }
+  return (
+    <div className="flex items-center justify-center min-h-[60vh]">
+     <span className="flex items-center gap-3 text-3xl font-bold text-orange-600">
+  Loading
+  <ThreeDots
+    height={32}
+    width={64}
+    color="#ea580c"   // orange-600
+    ariaLabel="loading"
+  />
+</span>
+    </div> );
+}
     return (
         <div className="py-8 max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {
