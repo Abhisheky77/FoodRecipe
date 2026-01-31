@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "./Context";
 import { IoSearchSharp } from "react-icons/io5";
-
+import { GiFoodTruck } from "react-icons/gi";
 function Navbar() {
   const { search, setSearch, handleSubmit } = useContext(GlobalContext);
 
@@ -12,9 +12,9 @@ function Navbar() {
         
         <NavLink
           to="/"
-          className="text-2xl font-extrabold tracking-wide text-orange-600 hover:scale-105 transition"
+          className=" flex flex-row text-2xl font-extrabold tracking-wide text-orange-600 hover:scale-105 transition"
         >
-          🍽️ FoodRecipe
+        FoodRecipe<GiFoodTruck size={30} />
         </NavLink>
 
         <form
