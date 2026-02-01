@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { GlobalContext } from "../Context";
 import { Button } from "../ui/button";
+import { ThreeDots } from "react-loader-spinner";
 
 function Details() {
   const { id } = useParams();
@@ -28,11 +29,18 @@ function Details() {
 
  
   if (!recipeDetailsData) {
-    return (
-      <div className="h-[60vh] flex items-center justify-center text-xl font-semibold">
-        Loading recipe details...
-      </div>
-    );
+   return (
+    <div className="flex items-center justify-center min-h-[60vh]">
+     <span className="flex items-center gap-3 text-3xl font-bold text-orange-600">
+  Loading Product Details
+  <ThreeDots
+    height={32}
+    width={64}
+    color="#ea580c"   // orange-600
+    ariaLabel="loading"
+  />
+</span>
+    </div> );
   }
 
   return (
