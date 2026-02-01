@@ -15,7 +15,7 @@ function Home() {
   <ThreeDots
     height={32}
     width={64}
-    color="#ea580c"   // orange-600
+    color="#ea580c"   
     ariaLabel="loading"
   />
 </span>
