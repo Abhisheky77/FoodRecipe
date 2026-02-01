@@ -12,12 +12,7 @@ function Home() {
     <div className="flex items-center justify-center min-h-[60vh]">
      <span className="flex items-center gap-3 text-3xl font-bold text-orange-600">
   Loading
-  <ThreeDots
-    height={32}
-    width={64}
-    color="#ea580c"   
-    ariaLabel="loading"
-  />
+  <ThreeDots height={32} width={64} color="#ea580c" ariaLabel="loading"/>
 </span>
     </div> );
 }
