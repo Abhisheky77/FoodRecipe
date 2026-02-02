@@ -17,8 +17,7 @@ function RecipeCard({ item }) {
           {title}
         </h1>
 
-        <Link
-          to={`/details/${id}`}
+        <Link to={`/details/${id}`}
           className="self-end text-center text-sm font-semibold text-white bg-orange-500 py-2 rounded-xl hover:bg-orange-600 transition"
         >
           Recipe Details
