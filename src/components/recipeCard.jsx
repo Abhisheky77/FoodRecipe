@@ -6,11 +6,7 @@ function RecipeCard({ item }) {
   return (
     <div
       className="w-full sm:w-[280px]  md:w-[300px]  h-[320px] bg-white rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-allduration-300 grid grid-rows-[200px_1fr]" >
-      <img
-        src={image_url}
-        alt="recipe item"
-        className="w-full h-full object-cover rounded-t-3xl p-3"
-      />
+      <img src={image_url} alt="recipe item" className="w-full h-full object-cover rounded-t-3xl p-3" />
 
       <div className="grid grid-rows-[auto_auto_1fr] px-4 pb-4">
         <span className="text-xs uppercase text-cyan-700 font-semibold">
