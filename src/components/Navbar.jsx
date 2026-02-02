@@ -17,10 +17,7 @@ function Navbar() {
         FoodRecipe<GiFoodTruck size={30} />
         </NavLink>
 
-        <form
-          onSubmit={handleSubmit}
-          className="w-full md:max-w-md relative"
-        >
+        <form  onSubmit={handleSubmit} className="w-full md:max-w-md relative">
           <input
             type="text"
             placeholder="Search recipes..."
