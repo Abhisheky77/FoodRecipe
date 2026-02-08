@@ -5,7 +5,6 @@ import {ThreeDots } from "react-loader-spinner";
 
 function Home() {
     const { recipeList, loading } = useContext(GlobalContext)
-    console.log("recipeList", recipeList);
 
     if (loading) {
   return (
