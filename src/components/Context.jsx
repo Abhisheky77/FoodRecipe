@@ -9,6 +9,7 @@ export default function GlobalState({ children }) {
   const [recipeList, setRecipeList] = useState([]);
   const [recipeDetailsData, setRecipeDetailsData] = useState(null);
   const [favoritesList, setFavoritesList] = useState([]);
+const [scrollValue, setScrollValue] = useState(0);
 
   const navigate = useNavigate();
  
@@ -36,6 +37,12 @@ export default function GlobalState({ children }) {
       setSearch("");
     }
   }
+
+  
+
+  function getScrollPercentage(value){
+ setScrollValue(value)
+  }
  
   function handleAddToFavorites(getCurrentItem) {
     let cpyFavoritesList = [...favoritesList];
@@ -56,7 +63,7 @@ export default function GlobalState({ children }) {
   return (
     <GlobalContext.Provider
       value={{ search, setSearch, loading, recipeList, recipeDetailsData, 
-        setRecipeDetailsData, favoritesList,handleSubmit, handleAddToFavorites, }}
+        setRecipeDetailsData, favoritesList,handleSubmit, handleAddToFavorites, getScrollPercentage, scrollValue}}
     >
       {children}
     </GlobalContext.Provider>

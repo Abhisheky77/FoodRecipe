@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "./Context";
 import { IoSearchSharp } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
+import ScrollIndicator from "./Scroll_indicator";
 function Navbar() {
-  const { search, setSearch, handleSubmit } = useContext(GlobalContext);
+  const { search, setSearch, handleSubmit,scrollValue,getScrollPercentage } = useContext(GlobalContext);
+  
 
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200">
@@ -55,6 +57,16 @@ function Navbar() {
             </li>
           ))}
         </ul>
+      </div>
+      <ScrollIndicator onScroll={getScrollPercentage}/>
+      <div className="w-full h-1 bg-slate-200 overflow-hidden">
+        <div
+          className="h-full rounded-full transition-all duration-150 ease-out"
+          style={{
+            width: `${scrollValue}%`,
+            background: "linear-gradient(90deg, #38bdf8, #0ea5e9)",
+          }}
+        />
       </div>
     </nav>
   );
