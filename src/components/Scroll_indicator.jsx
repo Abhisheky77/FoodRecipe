@@ -19,8 +19,6 @@ function ScrollIndicator({ onScroll }) {
     onScroll(scrollPercentage);
     setScroll(scrollPercentage)
   }
-  console.log(scoll);
-  
 
 
   useEffect(() => {
